@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './home.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -34,6 +36,7 @@ class _RootPageState extends State<RootPage> {
         title: const Text("Notepad App"),
         centerTitle: true,
       ),
+      body: const HomePage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint("Floating Action Button Pressed");
