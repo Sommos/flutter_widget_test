@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './home.dart';
+import './profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class RootPage extends StatefulWidget {
-  const RootPage({super.key});
+  const RootPage({super.key}); 
 
   @override
   State<RootPage> createState() => _RootPageState();
@@ -28,6 +29,10 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
+  List<Widget> pages = const [
+    HomePage(),
+    ProfilePage()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +41,7 @@ class _RootPageState extends State<RootPage> {
         title: const Text("Notepad App"),
         centerTitle: true,
       ),
-      body: const HomePage(),
+      body: pages[currentPage],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint("Floating Action Button Pressed");

@@ -23,6 +23,16 @@ class _LearnPageState extends State<LearnPage> {
           },
           icon: const Icon(Icons.arrow_back),
         ),
+        actions: [
+          IconButton(
+            onPressed: (){
+              debugPrint("Action Button Pressed");
+            }, 
+            icon: const Icon(
+              Icons.info_outline,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
