@@ -1,6 +1,6 @@
 # Second Flutter Project
 
-This program is to test flutter and dart, making a basic quiz application.
+This program is to test flutter and dart, testing out basic flutter widgets and buttons.
 
 # Contribution 
 
